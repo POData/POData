@@ -23,7 +23,7 @@
         "balihoo/phockito-unit" : "1.0.0",
         "hafriedlander/phockito" : "dev-master",
         "doctrine/annotations": "1.*",
-        "satooshi/php-coveralls": "dev-master",
+        "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
