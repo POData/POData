@@ -1,5 +1,5 @@
 {
-    "name": "POData/POData",
+    "name": "podata/podata",
     "type": "library",
     "description": "OData for Poor PHP Developers",
     "keywords": [ "rest", "odata" ],
