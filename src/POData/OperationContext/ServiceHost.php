@@ -312,7 +312,7 @@ Class ServiceHost
                         );
                     }
                     
-                    if (empty($optionValue)) {
+                    if (empty($optionValue) && $optionValue !== '0') {
 						throw ODataException::createBadRequestError(
                             Messages::hostODataQueryOptionFoundWithoutValue(
                                 $optionName
