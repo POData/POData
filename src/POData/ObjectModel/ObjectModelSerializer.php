@@ -844,7 +844,8 @@ class ObjectModelSerializer extends ObjectModelSerializerBase
 	} else if ($type instanceof DateTime && $primitiveValue instanceOf \DateTime) {
             $stringValue = $primitiveValue->format(\DateTime::ATOM);
         } else if ($type instanceof String) {
-            $stringValue = utf8_encode($primitiveValue);
+            $stringValue = htmlspecialchars($primitiveValue, NULL, 'UTF-8'); // utf8_encode($primitiveValue) was troubling ascent chars.
+	    $stringValue = str_replace('&amp;', '&', $stringValue); // special exception to allow (Name & Value) be retained.
         } else {        
             $stringValue = strval($primitiveValue);
         }
